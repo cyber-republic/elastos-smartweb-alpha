@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>    
+    <ion-title>Wallet Friend</ion-title>
+    <ion-buttons end>
+      <button (click)="closeModal()" ion-button clear icon-only style="">    
+        <ion-icon name="close-circle-outline"></ion-icon>  
+      </button>      
+    </ion-buttons>
+  </ion-navbar>    
+</ion-header>
+
+<ion-content class="app-page">
+  <div class="app-h-padding">
+    <h4>{{type}} friend</h4>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" placeholder="Name" [(ngModel)]="param.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Address" [(ngModel)]="param.address"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div class="app-h-padding">
+    <button ion-button block color="secondary" (click)="confirm()">Confirm</button>
+  </div>
+  
+  
+</ion-content>

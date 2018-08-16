@@ -1,0 +1,146 @@
+<ion-header>
+  <ion-navbar>    
+    <ion-buttons start>
+      <!-- <button (click)="goBack()" ion-button clear icon-only style="">    
+        <ion-icon name="arrow-dropleft"></ion-icon>    
+      </button>       -->
+    </ion-buttons>  
+    <ion-title>Wallet Detail</ion-title>
+  </ion-navbar>    
+</ion-header>
+
+<ion-content class="app-page">
+
+  <div padding>
+    <ion-segment [(ngModel)]="sec" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="sec_receive">
+        Receive
+      </ion-segment-button>
+      <ion-segment-button value="sec_send">
+        Send
+      </ion-segment-button>
+      <ion-segment-button value="sec_history">
+        History
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="sec">
+    <div *ngSwitchCase="'sec_receive'">
+        <div style="text-align: center;">
+          <qrcode class="d_qr" [qrdata]="qrcode" [size]="200" [level]="'M'"></qrcode>
+          <h4>{{qrcode}}</h4>
+          <h6>balance : {{qrcode_balance}}</h6>
+        </div>
+        
+        <ion-list style="margin-top: 20px;">
+          <button ion-item *ngFor="let item of address_list" (click)="setQRCode(item)">
+            {{item}}
+          </button>
+        </ion-list>
+    </div>
+  
+    <div *ngSwitchCase="'sec_send'">
+      <div class="app-h-padding">
+        <h4>Balance : {{info.balance}}</h4>  
+      </div>
+
+      <ion-list style="margin: 12px 0;">
+        <ion-item>
+          <ion-input [(ngModel)]="target.address" type="test" placeholder="Input target address"></ion-input>
+          <!-- <ion-icon name="search" item-end></ion-icon> -->
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="target.amount" type="number" placeholder="Input send amount"></ion-input>
+          
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="target.memo" type="test" placeholder="Input send request memo"></ion-input>
+        </ion-item>
+
+        <div class="app-h-padding">
+          <button ion-button small (click)="scanQRCode()">scan qrcode</button>
+        </div>
+        
+      </ion-list>
+      
+      <div class="app-padding">
+        <h6 *ngIf="target.fee > 0">Transform Fee : {{target.fee}}</h6>
+        <button *ngIf="!send_ready" ion-button block color="secondary" (click)="prepearForSend()">Send</button>
+        <button *ngIf="send_ready" ion-button block color="secondary" (click)="confirmSend()">Confirm</button>
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'sec_history'">
+      <!-- <div class="app-padding">
+        <h4>HISTORY</h4>
+        {{history}}
+      </div> -->
+      <ion-card *ngFor="let item of history">
+        <ion-card-header>
+          RECORD
+        </ion-card-header>
+        <ion-list>
+          <ion-item>
+            <ion-note>status</ion-note>
+            <ion-note item-end>{{item.status}}</ion-note>
+          </ion-item>
+      
+          <ion-item>
+            <ion-note>balance</ion-note>
+            <ion-note item-end>{{item.balance}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-note>incomingAmount</ion-note>
+            <ion-note item-end>{{item.incomingAmount}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-note>outcomingAmount</ion-note>
+            <ion-note item-end>{{item.outcomingAmount}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-note>incomingAddress</ion-note>
+            <ion-note item-end>{{item.incomingAddress}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-note>outcomingAddress</ion-note>
+            <ion-note item-end>{{item.outcomingAddress}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-note>transactionTime</ion-note>
+            <ion-note item-end>{{item.transactionTime}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-note>payfees</ion-note>
+            <ion-note item-end>{{item.payfees}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-note>confirmCount</ion-note>
+            <ion-note item-end>{{item.confirmCount}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-note>remark</ion-note>
+            <ion-note item-end>{{item.remark}}</ion-note>
+          </ion-item>
+      
+        </ion-list>
+      </ion-card>
+    </div>
+  </div>
+  
+  <!-- <div class="app-padding">
+    <h4>Address list</h4>
+  </div>
+  
+  <ion-list>
+    
+    <ion-item *ngFor="let item of address_list" (click)="goDetailPage(item)">
+      <h2>{{item.address}}</h2>
+      <p>Balance : {{item.balance}}</p>
+    </ion-item>
+  </ion-list> -->
+  
+  
+  
+  
+</ion-content>

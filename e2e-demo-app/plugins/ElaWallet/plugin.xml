@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="ElaWallet" version="1.0.0">
+  <name>Wallet</name>
+  <js-module name="Wallet" src="www/Wallet.js">
+    <clobbers target="cordova.plugins.Wallet"/>
+  </js-module>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="Wallet">
+        <param name="android-package" value="ElaWallet.Wallet"/>
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"/>
+    <source-file src="src/android/com/elastos/spvcore/IDid.java" target-dir="src/com/elastos/spvcore"/>
+    <source-file src="src/android/com/elastos/spvcore/IDidManager.java" target-dir="src/com/elastos/spvcore"/>
+    <source-file src="src/android/com/elastos/spvcore/IdManagerFactory.java" target-dir="src/com/elastos/spvcore"/>
+    <source-file src="src/android/com/elastos/spvcore/IIdChainSubWallet.java" target-dir="src/com/elastos/spvcore"/>
+    <source-file src="src/android/com/elastos/spvcore/IIdManagerCallback.java" target-dir="src/com/elastos/spvcore"/>
+    <source-file src="src/android/com/elastos/spvcore/IMainchainSubWallet.java" target-dir="src/com/elastos/spvcore"/>
+    <source-file src="src/android/com/elastos/spvcore/IMasterWallet.java" target-dir="src/com/elastos/spvcore"/>
+    <source-file src="src/android/com/elastos/spvcore/ISidechainSubWallet.java" target-dir="src/com/elastos/spvcore"/>
+    <source-file src="src/android/com/elastos/spvcore/ISubWallet.java" target-dir="src/com/elastos/spvcore"/>
+    <source-file src="src/android/com/elastos/spvcore/ISubWalletCallback.java" target-dir="src/com/elastos/spvcore"/>
+    <source-file src="src/android/com/elastos/spvcore/MasterWalletManager.java" target-dir="src/com/elastos/spvcore"/>
+    <source-file src="src/android/com/elastos/spvcore/WalletException.java" target-dir="src/com/elastos/spvcore"/>
+    <source-file src="src/android/Wallet.java" target-dir="src/ElaWallet"/>
+    <source-file src="src/android/com/elastos/wallet/util/LogUtil.java" target-dir="src/com/elastos/wallet/util"/>
+  </platform>
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="Wallet">
+        <param name="ios-package" value="Wallet"/>
+      </feature>
+    </config-file>
+    <source-file src="src/ios/Wallet.m"/>
+  </platform>
+</plugin>

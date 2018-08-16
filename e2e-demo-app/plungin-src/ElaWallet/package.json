@@ -1,0 +1,19 @@
+{
+  "name": "ElaWallet",
+  "version": "1.0.0",
+  "description": "",
+  "cordova": {
+    "id": "ElaWallet",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "",
+  "license": "ISC"
+}

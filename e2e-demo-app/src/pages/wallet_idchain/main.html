@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>    
+    <ion-title>IdChain</ion-title>
+  </ion-navbar>    
+</ion-header>
+  
+<ion-content class="app-page">
+  <div padding>
+    <ion-segment [(ngModel)]="main" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="recharge">
+        RECHARGE
+      </ion-segment-button>
+      <ion-segment-button value="withdraw">
+        WITHDRAW
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="main">
+    <div *ngSwitchCase="'recharge'">
+      <div class="app-h-padding">
+        <h4>ELA Balance : {{ela.balance}}</h4>  
+      </div>
+
+      <ion-list>
+        <ion-item>
+          <ion-label fixed>Amount</ion-label>
+          <ion-input type="number" [(ngModel)]="param1.amount"></ion-input>
+        </ion-item>  
+      </ion-list>
+
+      <div class="app-h-padding">
+        <button ion-button block (click)="recharge()">Recharge From Ela</button>
+      </div>
+      
+    </div>
+  
+    <div *ngSwitchCase="'withdraw'">
+
+      <div class="app-h-padding">
+        <h4>IdChain Balance : {{id_chain.balance}}</h4>  
+      </div>
+      <ion-list>
+        <ion-item>
+          <ion-label fixed>Amount</ion-label>
+          <ion-input type="number" [(ngModel)]="param2.amount"></ion-input>
+        </ion-item>  
+      </ion-list>
+
+      <div class="app-h-padding">
+        <button ion-button block (click)="withdraw()">Withdraw From IdChain</button>
+      </div>
+    </div>
+  </div>
+  
+</ion-content>
