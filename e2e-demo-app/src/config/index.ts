@@ -1,8 +1,6 @@
 export default {
   ditto : {
-    // url : 'http://localhost:8000/remote.php/dav/files/admin',
-    // url : 'http://192.168.1.105:8000/remote.php/dav/files/admin',
-    url : 'http://192.144.145.63:8000/remote.php/dav/files/admin',
+    url : 'http://localhost:8000/remote.php/dav/files/admin',
     username : 'admin',
     password : '111111',
 

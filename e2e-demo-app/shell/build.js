@@ -4,9 +4,9 @@ var archiver = require('archiver');
 var pwd = __dirname+'/../';
 
 var C = {
-  target : pwd + 'E2E.epk',
-  zip_pkg : pwd + 'EPK',
-  pkg : pwd+'EPK/E2E/www',
+  target : pwd + 'pkg/E2E.epk',
+  zip_pkg : pwd + 'pkg/EPK',
+  pkg : pwd+'pkg/EPK/E2E/www',
   src : pwd+'www'
 };
 
