@@ -1,0 +1,49 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.elastos.demo"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.elastos.demo"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.elastos.demo"
+    },
+    "cordova-plugin-filechooser": {
+      "PACKAGE_NAME": "com.elastos.demo"
+    },
+    "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "com.elastos.demo"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.elastos.demo"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.elastos.demo"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.elastos.demo"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.elastos.demo"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.elastos.demo"
+    },
+    "ElaWallet": {
+      "PACKAGE_NAME": "com.elastos.demo"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.elastos.demo"
+    }
+  },
+  "dependent_plugins": {}
+}

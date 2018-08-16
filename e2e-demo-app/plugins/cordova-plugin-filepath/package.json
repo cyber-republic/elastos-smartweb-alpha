@@ -1,0 +1,56 @@
+{
+  "_from": "cordova-plugin-filepath",
+  "_id": "cordova-plugin-filepath@1.3.0",
+  "_inBundle": false,
+  "_integrity": "sha512-Dwd76FcVciSssAZ/FPfwfOlfHrmx7CAjYTNzCxeJ4NsMkCfTysCR3vHdX/03XExGi+74DImUB17uXsnyyOYnAQ==",
+  "_location": "/cordova-plugin-filepath",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-filepath",
+    "name": "cordova-plugin-filepath",
+    "escapedName": "cordova-plugin-filepath",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-filepath/-/cordova-plugin-filepath-1.3.0.tgz",
+  "_shasum": "2d47ad4d8fcdbfe6e00e04d6ea6219a91eeb22e1",
+  "_spec": "cordova-plugin-filepath",
+  "_where": "/Users/jacky.li/Desktop/Elastos/Elastos_e2e_demo",
+  "author": {
+    "name": "Ramesh Nair",
+    "email": "ram@hiddentao.com"
+  },
+  "bugs": {
+    "url": "https://github.com/hiddentao/cordova-plugin-filepath/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-filepath",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Resolve native file paths from content URLs for Cordova platforms",
+  "homepage": "https://github.com/hiddentao/cordova-plugin-filepath#readme",
+  "keywords": [
+    "cordova",
+    "file",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-filepath",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiddentao/cordova-plugin-filepath.git"
+  },
+  "version": "1.3.0"
+}

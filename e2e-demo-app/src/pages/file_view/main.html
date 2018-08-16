@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>    
+    <ion-title>File View</ion-title>
+    <ion-buttons end>
+      <button (click)="closeModal()" ion-button clear icon-only style="">    
+        <ion-icon name="close-circle-outline"></ion-icon>  
+      </button>      
+    </ion-buttons>
+  </ion-navbar>    
+</ion-header>
+
+<ion-content class="app-page">
+  <div class="d_card app-padding">
+    <p>
+      <b>File Name : </b>
+      <span>{{data.name}}</span>
+    </p>
+    <p>
+      <b>File Size : </b>
+      <span>{{data.size}} bytes</span>
+    </p>
+    <p>
+      <b>Hash : </b>
+      <span>{{data.hash}}</span>
+    </p>
+  </div>
+
+  <div *ngIf="content" class="d_main app-padding">
+    <div *ngIf="isText">
+      {{content}}
+    </div>
+    <div *ngIf="isImage">
+      <img [src]="content" style="max-width: 100%;" />
+    </div>
+    <div *ngIf="isVideo">
+      <video controls [src]="content"></video>
+    </div>
+
+
+  </div>
+  
+</ion-content>

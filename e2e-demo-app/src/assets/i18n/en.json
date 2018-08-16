@@ -1,0 +1,53 @@
+{
+  "confirm" : "Confirm",
+  "cancel" : "Cancel",
+  "tab" : {
+    "0001" : "Ditto",
+    "0002" : "Wallet",
+    "0003" : "Setting"
+  },
+
+  "setting" : {
+    "0001" : "Language",
+    "0002" : "set language"
+  },
+
+  "ipfs" : {
+    "0001" : "Add File",
+    "0002" : "Add Folder",
+    "0003" : "Operation",
+    "0004" : "Rename",
+    "0005" : "Delete",
+    "0006" : "Enter a new name",
+    "0007" : "new name",
+    "0008" : "Enter a folder name"
+  },
+
+  "ditto" : {
+    "0001" : "Add File",
+    "0002" : "Add Folder",
+    "0003" : "Operation",
+    "0004" : "Rename",
+    "0005" : "Delete",
+    "0006" : "Enter a new name",
+    "0007" : "new name",
+    "0008" : "Enter a folder name",
+    "0009" : "Own-could"
+  },
+
+  "wallet" : {
+    "0001" : "Create Sub Wallet",
+    "0002" : "Create new master wallet",
+    "0003" : "Import master wallet with mnemonic",
+    "0004" : "Remove Master Wallet",
+    "0005" : "Wallet Setting",
+    "0006" : "Mnemonic",
+    "0007" : "Set password",
+    "0008" : "Create Master Wallet",
+    "0009" : "Back",
+    "0010" : "Base Setting",
+    "0011" : "Nick Name",
+    "0012" : "Friends List"
+  }
+  
+}

@@ -1,0 +1,33 @@
+<ion-content class="app-page">
+
+  <div class="app-padding" style="margin-top:25vh;text-align: center;">
+    <h4>Set Ditto Connection</h4>
+  </div>
+  
+  <ion-list>
+    <ion-item>
+      <ion-icon name="ios-cloud-upload-outline" item-start></ion-icon>
+      <ion-textarea [(ngModel)]="param.address" placeholder="Ditto Address"></ion-textarea>
+      
+    </ion-item>
+    <ion-item>
+      <ion-icon name="contact-outline" item-start></ion-icon>
+      <ion-input type="text" [(ngModel)]="param.username" placeholder="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="lock-outline" item-start></ion-icon>
+      <ion-input type="text" [(ngModel)]="param.password" placeholder="password"></ion-input>
+    </ion-item>
+    
+    <div class="app-h-padding" style="text-align: right;">
+      <button ion-button small (click)="scan()">
+        <!-- <ion-icon name="ios-qr-scanner"></ion-icon> -->
+        SCAN QR CODE
+      </button>
+    </div>
+  </ion-list>
+
+  <div class="app-h-padding">
+    <button (click)="confirm()" ion-button block>Confirm</button>
+  </div>
+</ion-content>

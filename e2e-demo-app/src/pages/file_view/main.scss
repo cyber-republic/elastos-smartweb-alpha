@@ -1,0 +1,28 @@
+page-file_view{
+  .app-page{
+    background: #fff;
+  }
+  .d_card{
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 15px;
+
+    p{
+      display: flex;
+      align-content: space-between;
+      b{
+        font-size: 14px;
+        display: block;
+      }
+      span{
+        display: block;
+        margin-left: 10px;
+        color: #333;
+        font-size: 14px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "_from": "cordova-plugin-filechooser",
+  "_id": "cordova-plugin-filechooser@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-+lnpe4zdkSYL4L7EYNuOxd6TSI8=",
+  "_location": "/cordova-plugin-filechooser",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-filechooser",
+    "name": "cordova-plugin-filechooser",
+    "escapedName": "cordova-plugin-filechooser",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-filechooser/-/cordova-plugin-filechooser-1.0.1.tgz",
+  "_shasum": "fa59e97b8cdd91260be0bec460db8ec5de93488f",
+  "_spec": "cordova-plugin-filechooser",
+  "_where": "/Users/jacky.li/Desktop/Elastos/Elastos_e2e_demo",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/ihadeed/cordova-filechooser/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Cordova FileChooser Plugin",
+  "homepage": "https://github.com/ihadeed/cordova-filechooser#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "cordova-plugin-filechooser",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihadeed/cordova-filechooser.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.1"
+}

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>    
+    <ion-title>DID List</ion-title>
+  </ion-navbar>    
+</ion-header>
+
+<ion-content class="app-page">
+  
+  <ion-list>
+    <button ion-item *ngFor="let item of did_list" (press)="showMenu(item)" (click)="goSettingPage(item)">
+      <span style="font-size:14px;">{{item}}</span>
+    </button>
+  </ion-list>
+
+  <div class="app-padding">
+    <button (click)="addDID()" ion-button block color="secondary">Add DID</button>
+  </div>
+
+</ion-content>

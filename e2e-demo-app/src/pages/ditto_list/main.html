@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">    
+    <ion-buttons start>
+      <button *ngIf="showUpBtn" (click)="goUp()" ion-button clear icon-only style="">    
+        <ion-icon name="arrow-dropleft"></ion-icon>    
+      </button>      
+    </ion-buttons>  
+    <ion-title>{{'ditto.0009' | translate}}</ion-title>
+    
+    
+  </ion-navbar>    
+</ion-header>
+
+<ion-content class="app-page">
+  <ion-list>
+    <button (press)="showItemMenu(item)" ion-item *ngFor="let item of list" (click)="clickItem(item)">
+      <ion-icon *ngIf="item.type === 'file'" name="ios-document-outline"></ion-icon>
+      <ion-icon *ngIf="item.type === 'dir'" name="ios-folder-outline"></ion-icon>
+      <span style="position:relative;left:5px;top:-2px;">{{item.name}}</span>
+    </button>
+  </ion-list>
+
+  <div class="app-padding">
+    <input hidden #file type="file" (change)="addFile(file)" />
+    <button ion-button block color="secondary" (click)="selectFile(file)">{{'ditto.0001' | translate}}</button>
+    <button ion-button block color="secondary" (click)="addFolder()">{{'ditto.0002' | translate}}</button>
+  </div>
+  
+</ion-content>

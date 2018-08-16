@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar> 
+    <ion-buttons start>
+      <button *ngIf="path && path !== '/'" (click)="goUp()" ion-button clear icon-only style="">    
+        <ion-icon name="arrow-dropleft"></ion-icon>    
+      </button>      
+    </ion-buttons>    
+    <ion-title>IPFS</ion-title>
+    <ion-buttons end>
+      <input hidden #file type="file" (change)="addFile(file)" />
+      <!-- <button (click)="selectFile(file)" ion-button clear icon-only style="">    
+        <ion-icon name="add-circle-outline"></ion-icon>  
+      </button>       -->
+    </ion-buttons>
+  </ion-navbar>    
+</ion-header>
+
+<ion-content class="app-page">
+  <ion-list>
+    <button (press)="showItemMenu(item)" ion-item *ngFor="let item of list" (click)="clickItem(item)">
+      <ion-icon *ngIf="item.type === 'file'" name="ios-document-outline"></ion-icon>
+      <ion-icon *ngIf="item.type === 'directory'" name="ios-folder-outline"></ion-icon>
+      <span style="position:relative;left:5px;top:-2px;">{{item.name}}</span>
+    </button>
+  </ion-list>
+
+  <div class="app-padding">
+    <button ion-button block color="secondary" (click)="selectFile(file)">{{'ipfs.0001' | translate}}</button>
+    <button ion-button block color="secondary" (click)="addFolder()">{{'ipfs.0002' | translate}}</button>
+  </div>
+  
+</ion-content>

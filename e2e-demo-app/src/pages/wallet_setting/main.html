@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>    
+    <ion-title>{{'wallet.0005' | translate}}</ion-title>
+  </ion-navbar>    
+</ion-header>
+
+<ion-content class="app-page">
+  
+  <div class="app-h-padding">
+    <h4>{{'wallet.0010' | translate}}</h4>
+    <span>{{did}}</span>
+  </div>
+  <ion-list>
+    <button ion-item (click)="editNickName()">
+      {{'wallet.0011' | translate}}
+      <ion-note item-end >{{info.nickName}}</ion-note>
+    </button>
+  </ion-list>
+
+  <div class="app-h-padding" style="margin-top: 24px;">
+    <h4>{{'wallet.0012' | translate}}</h4>
+  </div>
+  <ion-list>
+    <button *ngFor="let item of friends; let i = index" ion-item (click)="editFriend(item, i)">
+      {{item.name}}
+      <ion-note item-end >{{item.address}}</ion-note>
+    </button>
+  </ion-list>
+  
+  <div class="app-h-padding">
+    <button ion-button block color="secondary" (click)="addFriend()">Add friend</button>
+  </div>
+  
+  
+  
+</ion-content>
