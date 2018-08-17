@@ -1,0 +1,18 @@
+<app-header [header]="header"></app-header>
+
+<div>
+    <div class="weui-cells__title" style="font-size: 1em">
+        {{'text-coin-list' | translate}}
+    </div>
+
+    <ul class="weui-cells">
+        <li class="weui-cell weui-cell_access" *ngFor="let item of coinList" (click)="onItem(item)">
+            <div class="weui-cell__hd">
+                <img src="./assets/images/logo-maincolor.svg" alt="" class="home-list-img"></div>
+            <div class="weui-cell__bd home-list-title">
+                {{item.name}}
+            </div>
+        </li>
+    </ul>
+
+</div>

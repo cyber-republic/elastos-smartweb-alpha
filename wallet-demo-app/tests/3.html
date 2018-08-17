@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="js/sha256.min.js"></script>-->
+    <!--<script src="js/elliptic.min.js"></script>-->
+    <!--<script src="js/jquery.js"></script>-->
+</head>
+<body>
+
+</body>
+<script>
+
+let ids = {
+  "iZzgcVwu5uoca7NT4VpTV3fuYM1jHmgz52": {
+    "id": "iZzgcVwu5uoca7NT4VpTV3fuYM1jHmgz52",
+    "kyc": {
+      "person": {
+        "order": {
+          "MOB1531582506423954": {
+            "txHash": "d4fdb35da3f6e4fd1287dad583d99f4eff5755574244c4fa612ac059f7e9a673",
+            "serialNum": "MOB1531582506423954",
+            "status": 1,
+            "params": {
+              "id": "iZzgcVwu5uoca7NT4VpTV3fuYM1jHmgz52",
+              "appName": "kyc",
+              "type": "person",
+              "adata": [{
+                "type": "identityCard",
+                "result": "success",
+                "retdata": {
+                  "app": "b1c0b7028c8c4be3beafc4c4812ae92e",
+                  "identityNumber": "410426198811151012",
+                  "signature": "f9f77f66066cbbeb108f3da58c7a526c2731ce6d49bf65e6bf0776e7869ef2487554308a165dcb3b07bdf71aaaa264db82e3b2bd797eafeffb36d04b056e7cc2",
+                  "fullName": "宋家准",
+                  "authid": "12345678",
+                  "ts": "1533115991"
+                },
+                "message": "认证成功",
+                "timestamp": "1533116172504",
+                "resultSign": "30450221009de19dfaeb8b9754d9bd95d3c098c6c31affaa5b7b75dc144591fb0589aae0ce02205b8e6e7d2e3a976f1ce0b38011dd9d250b277199964c23042be4c9d7d25238ba"
+              }, {
+                "type": "phone",
+                "result": "success",
+                "retdata": {
+                  "app": "b1c0b7028c8c4be3beafc4c4812ae92e",
+                  "identityNumber": "410426198811151012",
+                  "signature": "0174aca19c4e63365b7aeed0c828da765e167c9a3bf6c2bb1fceaed2d9eb6bfde6e2266789257c5fd2923b8010e0d61df8c92c9dbc9402b715972a0139828c1a",
+                  "mobile": "18210230496",
+                  "fullName": "宋家准",
+                  "authid": "12345678",
+                  "ts": "1533115991"
+                },
+                "message": "认证成功",
+                "timestamp": "1533116172504",
+                "resultSign": "3046022100cc382d9af32f1a70699068602b5e07b16d1cf9aeac8f2808fb89f70b6fb8106b022100ba7d9596af87a7a65061914947ca9f3005e678fa2919252930b37b3c6bcb02d4"
+              }, {
+                "type": "bankCard",
+                "result": "success",
+                "retdata": {
+                  "app": "b1c0b7028c8c4be3beafc4c4812ae92e",
+                  "identityNumber": "410426198811151012",
+                  "signature": "68b8845e6baebfce32cd5828b53f96c7e4ec6c4748c8194f6701ebee1240d951981cd3c56882289ce292b4fa48497bc375893b00fc59dccf0679b1d0bd0611dd",
+                  "mobile": "18210230496",
+                  "fullName": "宋家准",
+                  "cardNumber": "6225880167820399",
+                  "authid": "12345678",
+                  "ts": "1533115992"
+                },
+                "message": "认证成功",
+                "timestamp": "1533116172504",
+                "resultSign": "3045022009c3b7c9edd31657788dc8286b99bf52b41a78a9e7cbb8b41135f7f0659b99b402210082bfefaca3f79d3c3130fb61fcd0ce97c7ba09e3715a7a00e242d5b5b6718739"
+              }]
+            }
+          }
+        }
+      },
+      "company": {
+        "order": {
+          "OBR1531582194077613": {
+            "txHash": "111aa64491bd722b271f568a146b1e16286ce95046ef8a2d505608be43711267",
+            "serialNum": "OBR1531582194077613"
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// function getSertoId(){
+//
+// let target = {};
+// let newIds = {};
+//
+// for(let id in ids){
+//
+//   let  idJsonObj = ids[id];
+//
+//   if (! idJsonObj["kyc"]){
+//       continue;
+//   }
+//   for (let authType in idJsonObj["kyc"]){
+//       if (!idJsonObj["kyc"][authType]["order"]){
+//         continue
+//       }
+//       let order = idJsonObj["kyc"][authType]["order"];
+//
+//       for (let prop in order) {
+//
+//         if ( order[prop]["params"] && order[prop]["params"]["adata"])
+//         {
+//           var addataArry = [];
+//           addataArry = order[prop]["params"]["adata"];
+//
+//           addataArry.forEach(function (value) {
+//
+//             if (value && value["retdata"]) {
+//
+//               if ( value["retdata"]["signature"]) {
+//                 let sign = value["retdata"]["signature"];
+//                 target[sign] = order[prop];
+//                 console.info( "ElastosJs add sign " + sign + " obj "+ JSON.stringify(order[prop]));
+//               }
+//             }
+//           })
+//         }
+//
+//       }
+//   }
+//
+// }
+//
+//   return target;
+// }
+
+//////////////////////
+function getKycContent(authType, authData){
+
+  let retContent = {};
+
+  switch (authData.type)
+  {
+    case "identityCard":
+      retContent["fullName"] = authData["retdata"]["fullName"];
+      retContent["identityNumber"] = authData["retdata"]["identityNumber"];
+      break;
+
+    case "phone":
+      retContent["fullName"] =  authData["retdata"]["fullName"];
+      retContent["identityNumber"] =  authData["retdata"]["identityNumber"];
+      retContent["mobile"] = authData["retdata"]["mobile"];
+      break;
+
+    case "bankCard":
+      retContent["fullName"] =  authData["retdata"]["fullName"];
+      retContent["identityNumber"] =  authData["retdata"]["identityNumber"];
+      retContent["cardNumber"] = authData["retdata"]["cardNumber"];
+      retContent["cardMobile"] = authData["retdata"]["mobile"];
+      break;
+
+    case "enterprise":
+      retContent["word"] = authData["retdata"]["word"];
+      retContent["legalPerson"] = authData["retdata"]["legalPerson"];
+      retContent["registrationNum"] = authData["retdata"]["RegistrationNum"];
+      break;
+  }
+  return retContent;
+}
+
+function getcontent(authType, authData){
+
+  let retContent = {};
+  retContent["path"] = 'kyc' +'/' +authType +'/'+ authData["type"];
+
+  let proofObj = {
+    signature : authData["resultSign"],
+    notary : "COOIX"
+  }
+
+  retContent["proof"] = JSON.stringify(proofObj);
+
+  let kycContent = getKycContent(authType, authData);
+  //let authDataHash = IDManager.hash(JSON.stringify(kycContent)+retContent["proof"]);
+
+  //retContent["DataHash"] = IDManager.hash(authDataHash+retContent["proof"]);
+
+  return retContent;
+}
+
+function caulmessageNew(){
+
+  //
+  ///////////////////////
+  let signMessage= {};
+
+  signMessage["Id"] = "iZzgcVwu5uoca7NT4VpTV3fuYM1jHmgz52" ;//this.did
+  signMessage["Contents"] =[];
+  let content ;
+  let params = ids["iZzgcVwu5uoca7NT4VpTV3fuYM1jHmgz52"]["kyc"]["person"]["order"]["MOB1531582506423954"]["params"];//this.idObj
+
+  for (let ele of params.adata) {
+    content = getcontent(params.type , ele);
+    signMessage["Contents"].push(content);
+  }
+
+  console.log("caulmessageNew"+JSON.stringify(signMessage));
+  alert("caulmessageNew"+JSON.stringify(signMessage));
+
+  // this.walletManager.didSign(this.did,JSON.stringify(signMessage),this.passworld,(result)=>{
+  //   this.message = {
+  //     Id : this.did,
+  //     Sign :result.value,
+  //     Contents: signMessage["Contents"],
+  //   };
+  //   this.didGenerateProgram();
+  // });
+}
+////////////////////////
+
+function t1(){
+
+  let data = {
+    "id": "iiLqvSs263YfHKrb61QP4De7THNCfWkKEo",
+    "path": "Added",
+    "value": "{\"Contents\":[{\"DataHash\":\"7f6d1d62480d06e939999f33cc9f3802602236dccfb8243a2e74176b9fb905ab\",\"Path\":\"kyc/company/enterprise\",\"Proof\":\"{\\\"signature\\\":\\\"6bda8a568c740d67a048e166311408a25b53682da95aa0e78ae6e96e7a158b09985b0c379d45eaa53f3433267df03a3e7c7326c0a02b0f2ee7bd1ab2c667e3b2\\\",\\\"notary\\\":\\\"COOIX\\\"}\"}],\"Id\":\"iiLqvSs263YfHKrb61QP4De7THNCfWkKEo\",\"Sign\":\"4001f55aece5b3b9e01d1f42482ff2330cf8e8b89c7cdf0d327eaa1a82b337d49d360a1aabbd9b25a5b36b21f1397617c0f11463ef8f5d7aafae6b47ace6d12ef0\"}"
+  }
+
+
+
+  console.info("home.ts ElastosJs createDID registerIdListener "+ JSON.stringify(data));
+  //alert("home.ts createDID registerIdListener  data  callback"+ JSON.stringify(data));
+  //first commit
+  if(data["path"] == "Added"){
+
+    let valueObj = JSON.parse(data["value"]) ;
+    if((valueObj["Contents"].length > 0) && valueObj["Contents"][0]["Proof"]){
+
+      let proofObj = JSON.parse(valueObj["Contents"][0]["Proof"]);
+      let seqNumObj = self.dataManager.getSeqNumObj(proofObj["signature"]);
+      let serialNum =  seqNumObj["serialNum"] ;
+      console.info("home.ts ElastosJs createDID serialNum "+ serialNum);
+      //this.setOrderStatus(3,serialNum);
+    }
+  }
+  //console.info("home.ts ElastosJs createDID registerIdListener " + JSON.stringify(data));
+
+  console.info("home.ts ElastosJs createDID registerIdListener  data  callback !!!!!" + JSON.stringify(data));
+
+}
+t1();
+//caulmessageNew();
+//console.log("============"+JSON.stringify(ss));
+//alert("====kyc===="+JSON.stringify(ss));
+
+</script>
+</html>

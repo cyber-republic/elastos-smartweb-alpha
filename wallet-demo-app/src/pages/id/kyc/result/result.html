@@ -1,0 +1,105 @@
+<app-header [header]="header"></app-header>
+<div class="company-result">
+    <div class="result-title" *ngIf="type==='0'">
+        <p>{{'text-kyc-success' | translate }} <img src='./assets/images/icon/icon-success.svg' class="result-img" /></p>
+    </div>
+
+    <div class="result-title" *ngIf="type==='1'">
+        <p>{{'text-kyc-failure' | translate }} <img src='./assets/images/icon/icon-failure.svg' class="result-img" /></p>
+    </div>
+    <div class="weui-cells__title">{{'text-kyc-message' | translate }}</div>
+    <div class="weui-cells">
+        <div class="weui-cell" *ngIf="approdType==='identityCard'">
+            <div class="weui-cell__bd">
+                <p>{{'text-name' | translate }}：</p>
+            </div>
+            <div class="weui-cell__ft">{{personObj.fullName}}</div>
+        </div>
+
+        <div class="weui-cell" *ngIf="approdType==='identityCard'">
+            <div class="weui-cell__bd">
+                <p>{{'text-identity' | translate }}：</p>
+            </div>
+            <div class="weui-cell__ft">{{personObj.identityNumber}}</div>
+        </div>
+
+        <div class="weui-cell" *ngIf="approdType==='phone'">
+            <div class="weui-cell__bd">
+                <p>{{'text-name' | translate }}：</p>
+            </div>
+            <div class="weui-cell__ft">{{phoneObj.fullName}}</div>
+        </div>
+
+        <div class="weui-cell" *ngIf="approdType==='phone'">
+            <div class="weui-cell__bd">
+                <p>{{'text-identity' | translate }}：</p>
+            </div>
+            <div class="weui-cell__ft">{{phoneObj.identityNumber}}</div>
+        </div>
+
+        <div class="weui-cell" *ngIf="approdType==='phone'">
+            <div class="weui-cell__bd">
+                <p>{{'text-phone' | translate }}：</p>
+            </div>
+            <div class="weui-cell__ft">{{phoneObj.mobile}}</div>
+        </div>
+
+
+        <div class="weui-cell" *ngIf="approdType==='bankCard'">
+            <div class="weui-cell__bd">
+                <p>{{'text-name' | translate }}：</p>
+            </div>
+            <div class="weui-cell__ft">{{debitObj.fullName}}</div>
+        </div>
+
+        <div class="weui-cell" *ngIf="approdType==='bankCard'">
+            <div class="weui-cell__bd">
+                <p>{{'text-identity' | translate }}：</p>
+            </div>
+            <div class="weui-cell__ft">{{debitObj.identityNumber}}</div>
+        </div>
+
+        <div class="weui-cell" *ngIf="approdType==='bankCard'">
+            <div class="weui-cell__bd">
+                <p>{{'text-phone' | translate }}：</p>
+            </div>
+            <div class="weui-cell__ft">{{debitObj.cardMobile}}</div>
+        </div>
+
+        <div class="weui-cell" *ngIf="approdType==='bankCard'">
+            <div class="weui-cell__bd">
+                <p>{{'text-card' | translate }}：</p>
+            </div>
+            <div class="weui-cell__ft">{{debitObj.cardNumber}}</div>
+        </div>
+
+        <div class="weui-cell" *ngIf="approdType==='enterprise'">
+            <div class="weui-cell__bd">
+                <p>{{'text-company-name' | translate }}：</p>
+            </div>
+            <div class="weui-cell__ft">{{businessObj.word}}</div>
+        </div>
+
+        <div class="weui-cell" *ngIf="approdType==='enterprise'">
+            <div class="weui-cell__bd">
+                <p>{{'text-company-legal' | translate }}：</p>
+            </div>
+            <div class="weui-cell__ft">{{businessObj.legalPerson}}</div>
+        </div>
+
+        <div class="weui-cell" *ngIf="approdType==='enterprise'">
+            <div class="weui-cell__bd">
+                <p>{{'text-company-code' | translate }}：</p>
+            </div>
+            <div class="weui-cell__ft">{{businessObj.registrationNum}}</div>
+        </div>
+    </div>
+    <div class="weui-cells_checkbox" style="text-align: center;margin-top: 30px">
+        <div class="weui-cell__bd">
+            <p class="text-person-agreement-wenzi">{{ 'text-id-chain-prompt1' | translate }}</p>
+        </div>
+    </div>
+    <div class="btn-commit" (click)="onCommit()">
+        {{'text-data-chain' | translate}}
+    </div>
+</div>

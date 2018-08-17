@@ -1,0 +1,26 @@
+<app-header [header]="header"></app-header>
+<div class="coin-list">
+    <ul>
+        <li class="weui-cell weui-cell_switch" *ngFor="let item of coinList">
+            <div class="weui-cell__bd">{{item.name}}</div>
+            <div class="weui-cell__ft">
+                <input class="weui-switch" [checked]="item.open" type="checkbox" (click)="onSelect(item)" *ngIf="item.name!='ELA'">
+            </div>
+        </li>
+    </ul>
+
+    <weui-popup #subscribe>
+        <div class="pop-box">
+            <div class="weui-cell" style="margin: 10px; padding: 0px">
+                <input class="weui-input" type="password" placeholder="{{ 'text-pay-passworld-input' | translate }}" [(ngModel)]="payPassword">
+            </div>
+            <label for="weuiAgree" class="weui-agree">
+      <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox" [(ngModel)]="singleAddress" name="agree">
+      <span class="weui-agree__text">
+                 &nbsp;&nbsp;{{'text-signaddress' | translate }}
+              </span>
+    </label>
+            <div class="button-default " style="margin: 20px auto" (click)="onClick()">{{ 'confirm' | translate }}</div>
+        </div>
+    </weui-popup>
+</div>

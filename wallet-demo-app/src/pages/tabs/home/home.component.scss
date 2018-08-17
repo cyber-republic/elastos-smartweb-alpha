@@ -1,0 +1,48 @@
+.home-top-box {
+    text-align: center;
+    padding: 30px 0px 50px 0px;
+    &>img {
+        width: 60px;
+    }
+}
+
+.home-list-img {
+    height: 40px;
+    margin-right: 20px;
+}
+
+.home-list-title {
+    font-size: 1.2em;
+    line-height: 40px;
+}
+
+.home-eye {
+    width: 24px;
+    height: 24px;
+    float: right;
+    background-size: 100%;
+}
+
+.home-eye-off {
+    background-image: url("../assets/images/icon/icon-eye-off.svg");
+}
+
+.home-eye-on {
+    background-image: url("../assets/images/icon/icon-eye-on.svg");
+}
+
+.home-top {
+    position: relative;
+    .home-top-button-left {
+        width: 30px;
+        margin: 10px;
+    }
+    .home-top-button-right {
+        position: absolute;
+        margin: 10px;
+        right: 0px;
+        width: 40px;
+        height: 40px;
+        top: 0px;
+    }
+}

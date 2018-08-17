@@ -1,0 +1,15 @@
+@import "./../../coin/coin.component.scss";
+.kuangTextArea {
+    text-align: center;
+    padding: 10px
+}
+
+.backupWalletTextArea {
+    width: 100%;
+    border: solid 1px #ddd;
+    border-radius: 20px;
+    margin-top: 10px;
+    resize: none;
+    padding-left: 10px;
+    padding-top: 10px;
+}

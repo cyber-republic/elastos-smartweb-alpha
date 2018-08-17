@@ -1,0 +1,34 @@
+<app-header [header]="header"></app-header>
+
+<div class='address-whole'>
+    <div class="coin-info-top-box">
+        <img src="./assets/images/logo-maincolor.svg">
+        <div>{{coinCount}}&nbsp; {{ coinName }}</div>
+
+    </div>
+
+    <div class="weui-cells__title">{{ 'coin-recent-transfer' | translate }}</div>
+    <ul class="weui-cells transfer-list">
+        <li class="weui-cell weui-cell_access" *ngFor="let item of transferList" (click)="onItem(item)">
+            <div class="weui-cell__hd">
+                <img src="./assets/images/tx-state/icon-tx-moved.svg" alt="" class="transfer-list-img"></div>
+            <div class="weui-cell__bd">
+                <p><br/> {{item.status | translate}} <span class="transfer-list-date" *ngIf="item.timestamp!='0'"> {{item.datetime}} </span></p>
+            </div>
+            <div class="weui-cell__ft">{{item.balance > 0 ? '+' : ''}} {{item.balance}} {{item.name}}</div>
+        </li>
+    </ul>
+
+    <!-- <div class="coin-outher" (click)="onNext(3)">  {{ 'transfer-more' | translate }} </div> -->
+    <div class="coin-bottom">
+        <div (click)="onNext(1)">
+            {{ 'text-receive' | translate }}
+        </div>
+        <div (click)="onNext(3)">
+            {{ this.textShow | translate }}
+        </div>
+        <div (click)="onNext(2)">
+            {{ 'text-transfer' | translate }}
+        </div>
+    </div>
+</div>
