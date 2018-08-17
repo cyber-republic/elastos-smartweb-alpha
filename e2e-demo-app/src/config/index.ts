@@ -12,10 +12,7 @@ export default {
     secret : 'secret'
   },
   ipfs : {
-    url: '/ip4/192.168.1.253/tcp/5001'
-    // url : '/ip4/192.144.145.63/tcp/5001'
-    // url : '/ip4/127.0.0.1/tcp/5001'
-    // url : '/ip4/192.168.1.105/tcp/5001'
+    url : '/ip4/127.0.0.1/tcp/5001'
   },
   did : {
     key : 'E2E_DEMO'

@@ -25,7 +25,7 @@ npm install ionic cordova -g
 npm install
 npm run build:epk
 ```
-* You will find the **E2E.epk** file under the current folder.
+* You will find the **E2E.epk** file under the "pkg/" folder.
 
 ## Dependent service info
 * Ditto server: You first need to run your own ditto server
@@ -34,11 +34,12 @@ npm run build:epk
 * Make sure to install docker and docker-compose first.
 * Run **npm run dep:start**
 * There will be a new folder named **data** under ./docker
-* Follow the [./docker/readme.md](./docker/readme.md) to config docker instance.
+* Follow the [./docker/readme.md](./docker/readme.md) to configure docker instance.
 * Run **npm run dep:stop && npm run dep:start** to restart instance.
 
 ## Connect ditto server with carrier
-* Open local ditto box with http://127.0.0.1:8000 if you did not change ditto settings.
+* Open local ditto box with http://127.0.0.1:8000 if you did not change ditto settings
+* Login: admin/111111
 * Open E2E app and click **Ditto**
 * Click **SCAN QR CODE** to and scan the qr code on page.
 * When the address appear, click the *Confirm* button.
