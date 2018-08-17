@@ -1,4 +1,5 @@
 # Elastos_e2e_demo
+* [Video guide](https://www.youtube.com/watch?v=8cp_K4TF3ZM): This video showcases how you can build your very own end-to-end demo dapp. Great resource for any developer to quickly get started on writing an elastos dapp.
 
 ## Get Trinity app
 * You can download and install "pkg/trinity.apk" file onto your android device
