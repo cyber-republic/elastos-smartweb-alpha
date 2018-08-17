@@ -1,0 +1,113 @@
+@import "../../../theme/id";
+.import-box {
+    background-color: $color-main;
+    .kuangTextArea {
+        text-align: center;
+        padding: 10px
+    }
+    .backupWalletTextArea {
+        width: 100%;
+        border: solid 1px #ddd;
+        border-radius: 20px;
+        margin-top: 10px;
+        resize: none;
+        color: #000000;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    /* 导入id文件 */
+    .importid-box {
+        width: 88%;
+        height: 250px;
+        // padding: 20px 0;
+        margin: 10% auto 0px auto;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 21px 2px rgba(9, 122, 211, 0.5);
+        border-radius: 16px;
+        @media screen and (min-width: 780px) {
+            height: 290px;
+            // padding:0;
+        }
+        p {
+            font-family: PingFangSC-Semibold;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 48px;
+            letter-spacing: 0px;
+            color: #666666;
+            text-align: center;
+        }
+        &>.import-input {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            display: -webkit-box;
+            /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+            display: -moz-box;
+            /* 老版本语法: Firefox (buggy) */
+            display: -ms-flexbox;
+            /* 混合版本语法: IE 10 */
+            display: -webkit-flex;
+            /* 新版本语法: Chrome 21+ */
+            align-items: center;
+            text-align: center;
+            padding: 32px 20px;
+            box-sizing: border-box;
+            @media screen and (min-width: 780px) {
+                padding: 40px 20px;
+            }
+            .txtFileName {
+                background-color: #ffffff;
+                border-radius: 4px;
+                border: solid 1px #cccccc;
+                // margin-: 20px;
+                height: 34px;
+                flex: 1;
+                -webkit-box-flex: 1;
+                -moz-box-flex: 1;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                color: #000000;
+            }
+            .chooseFile {
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                // line-height: px;
+                letter-spacing: 0px;
+                color: #138efe;
+                width: 20%;
+                text-align: right;
+                cursor: pointer;
+            }
+        }
+        &>.btn1 {
+            width: 85%;
+            height: 45px;
+            margin: 0 auto;
+        }
+        .btn-t {
+            background: #138efe;
+            text-align: center;
+            line-height: 45px;
+            border-radius: 22px;
+            a {
+                color: #fff;
+            }
+        }
+        .btn-f {
+            text-align: center;
+            line-height: 45px;
+            a {
+                font-family: PingFangSC-Regular;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                line-height: 36px;
+                letter-spacing: 0px;
+                color: #138efe;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+page-person-write-chain {
+    .company-result {
+        .result-title {
+            text-align: center;
+            //height: 100px;
+            //line-height: 100px;
+            padding: 10% 0px;
+        }
+        .result-title p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0568B2;
+            line-height: 40px;
+        }
+        .result-left {
+            text-align: left;
+        }
+        .result-img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            // display: inline-block;
+        }
+        .btn-commit {
+            background: #097AD3;
+            text-align: center;
+            line-height: 45px;
+            border-radius: 22px;
+            width: 85%;
+            height: 45px;
+            margin: 25px auto;
+            color: #fff;
+            display: block;
+            font-size: 1em;
+        }
+    }
+}

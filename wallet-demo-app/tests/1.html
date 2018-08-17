@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <!--<script src="js/sha256.min.js"></script>-->
+    <!--<script src="js/elliptic.min.js"></script>-->
+    <!--<script src="js/jquery.js"></script>-->
+</head>
+<body>
+
+</body>
+<script>
+   let kycIds ={};
+   let id ="1"
+   let serNumber = "12444";
+   let kycApprod ={status:0,data:{1:{name:"sss",mobile:"18210230496"},2:{name:"sss",mobile:"18210230496"}}};
+   let key = id +"_" +serNumber;
+   kycIds[key] = kycApprod;
+       serNumber = "12445";
+       kycApprod ={status:0,data:{1:{name:"sss",mobile:"18210230496"},2:{name:"sss",mobile:"18210230496"}}};
+       key = id +"_" +serNumber;
+   kycIds[key] = kycApprod ;
+   alert("====kyc===="+JSON.stringify(kycIds));
+
+    function getObjKeys(obj){
+         let keys1 = [];
+     for (let p1 in obj) {
+        if (obj.hasOwnProperty(p1))
+              keys1.push(p1);
+      }
+      return keys1;
+    }
+
+
+    let keys = getObjKeys(kycIds);
+    alert("====key===="+JSON.stringify(keys));
+
+    function  getIdKeys(id,keys){
+        let arr = [];
+        for ( let index = 0; index < keys.length; index++){
+             console.log(keys[index]);
+             let k_id = keys[index].split("_")[0];
+             if(k_id === id){
+                arr.push(keys[index]);
+             }
+        }
+        return arr;
+    }
+
+    let idKeys = getIdKeys("1",keys);
+
+    alert("===idKeys==="+JSON.stringify(idKeys));
+
+
+    let appr = [{
+		"type": 1,
+		"result": "success",
+		"retdata": {
+			"app": "b1c0b7028c8c4be3beafc4c4812ae92e",
+			"signature": "760b042e180179ef5aefa4f45f430364b51dfaaf6a70c756daf941e2ddad4ed44b7af444f05ac282a4c241b3575f16ffcadd9476adfa3dc67c6095c266f13a50",
+			"RegistrationNum": "91110000802100433B",
+			"legalPerson": "梁志祥",
+			"word": "北京百度网讯科技有限公司",
+			"authid": "12345678",
+			"ts": "1522295661"
+		},
+		"message": "认证成功"
+	},
+	{
+		"type": 4,
+		"result": "fail",
+		"retdata": {
+			"app": "b1c0b7028c8c4be3beafc4c4812ae92e",
+			"signature": "26d72d2ca4a8da5ab8a58d1330fc6bb9cd5ab966789fe9d945afe355974da02d00da42310fd1f099f5192db9b0a6838254f62ffd1c0a6f2245d4f7b5f881f6fc",
+			"identityNumber": "152601199902113616",
+			"mobile": "15114746136",
+			"fullName": "王杰",
+			"cardNumber": "6122000000000333",
+			"authid": "12345678",
+			"ts": "1521192888"
+		},
+		"message": "认证信息不一致"
+	}
+];
+
+
+function arrToObj(arr){
+   let obj ={};
+   for(let index = 0; index<arr.length;index++){
+       let item = arr[index];
+       let type = item["type"];
+       obj[type] = arr[index];
+   }
+   return obj;
+}
+
+apprObj = arrToObj(appr);
+
+alert("===appr====="+JSON.stringify(apprObj));
+
+</script>
+</html>

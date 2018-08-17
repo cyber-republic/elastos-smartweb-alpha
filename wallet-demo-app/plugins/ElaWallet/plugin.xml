@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="ElaWallet" version="1.0.0">
+  <name>Wallet</name>
+  <js-module name="Wallet" src="www/Wallet.js">
+    <clobbers target="cordova.plugins.Wallet"/>
+  </js-module>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="Wallet">
+        <param name="android-package" value="ElaWallet.Wallet"/>
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"/>
+    <source-file src="src/android/Wallet.java" target-dir="src/ElaWallet"/>
+  </platform>
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="Wallet">
+        <param name="ios-package" value="Wallet"/>
+      </feature>
+    </config-file>
+    <source-file src="src/ios/Wallet.m"/>
+  </platform>
+</plugin>

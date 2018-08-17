@@ -1,0 +1,22 @@
+SQLite 3.22.0 with EXTRA DURABLE build for Android
+
+(cordova-sqlite-storage-dependencies 1.2.0)
+
+using -DSQLITE_DEFAULT_SYNCHRONOUS=3 compile-time setting
+
+ref: litehelpers/Cordova-sqlite-storage#736
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Changes to be committed:
+#	modified:   README.md
+#	modified:   libs/sqlite-native-driver.jar
+#	modified:   package.json
+#	modified:   sqlite3.c
+#	modified:   sqlite3.h
+#
+# Untracked files:
+#	.README.md.swp
+#	a1
+#

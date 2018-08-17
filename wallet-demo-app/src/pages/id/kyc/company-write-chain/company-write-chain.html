@@ -1,0 +1,48 @@
+<ion-header>
+    <app-header [header]="header"></app-header>
+</ion-header>
+<ion-content no-bounce>
+    <div class="company-result">
+        <div class="result-title" *ngIf="type==='0'">
+            <p>{{'text-kyc-success' | translate }} <img src='./assets/images/icon/icon-success.svg' class="result-img" /></p>
+        </div>
+
+        <div class="result-title" *ngIf="type==='1'">
+            <p>{{'text-kyc-failure' | translate }} <img src='./assets/images/icon/icon-failure.svg' class="result-img" /></p>
+        </div>
+        <div class="weui-cells__title">{{'text-kyc-message' | translate }}</div>
+        <div class="weui-cells">
+
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>{{'text-company-name' | translate }}：</p>
+                </div>
+                <div class="weui-cell__ft">{{businessObj.word}}</div>
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>{{'text-company-legal' | translate }}：</p>
+                </div>
+                <div class="weui-cell__ft">{{businessObj.legalPerson}}</div>
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>{{'text-company-code' | translate }}：</p>
+                </div>
+                <div class="weui-cell__ft">{{businessObj.registrationNum}}</div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer>
+    <div class="weui-cells_checkbox" style="text-align: center;margin-top: 30px">
+        <div class="weui-cell__bd">
+            <p class="text-person-agreement-wenzi">{{ 'text-id-chain-prompt1' | translate }}</p>
+        </div>
+    </div>
+    <button ion-button full class="button-footer" (click)="onCommit()" style="width: 100%" *ngIf="orderStatus===1"> {{'text-data-chain' | translate}}</button>
+    <button ion-button full class="button-footer" style="width: 100%" *ngIf="orderStatus===2">{{'text-data-chain1' | translate}}</button>
+    <button ion-button full class="button-footer" style="width: 100%" *ngIf="orderStatus===3">{{'text-data-chain2' | translate}}</button>
+</ion-footer>

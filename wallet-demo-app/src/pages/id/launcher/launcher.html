@@ -1,0 +1,22 @@
+<app-header [header]="header"></app-header>
+<div class="id-box id-launcher-box">
+    <img class="id-logo" src="./assets/images/1.0logo.png">
+
+    <div class="content-id">
+        <div class="id-con">
+            <p>{{ 'text-id-not' | translate }}</p>
+            <div class="id-btn creat-id">
+                <a (click)="onNext(0)">
+                    <i class="icon"></i>
+                    <span>{{ 'text-id-create' | translate }}</span>
+                </a>
+            </div>
+            <div class="id-btn import-id">
+                <a (click)="onNext(1)">
+                    <i class="icon"></i>
+                    <span>{{ 'text-id-import' | translate }}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

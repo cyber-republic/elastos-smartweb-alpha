@@ -1,0 +1,43 @@
+<ion-header>
+    <app-header [header]="header"></app-header>
+</ion-header>
+<ion-content>
+    <div class="mnemonic">
+        <div class="slide-container">
+            <div class="slide-title">{{ 'text-mnemonic-prompt' | translate}}</div>
+            <div class="slide-body">
+                <div class="phrase-container">
+                    <div class="phrase">
+                        <span *ngFor="let item of mnemonicList;let i=index">
+                      <span>{{item.text}}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mnemonic-password">
+                <div class="weui-cells__title title_h">
+                    <span class="float-left">{{'text-mnemonic-label' | translate }}</span>
+                    <input class="weui-switch float-right" type="checkbox" [(ngModel)]="isSelect">
+                </div>
+                <div class="weui-cells" *ngIf="isSelect">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <input class="weui-input" type="password" placeholder="{{ 'text-mnemonic-pwd' | translate }}" [(ngModel)]="mnemonicPassword">
+                        </div>
+                    </div>
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <input class="weui-input" type="password" placeholder="{{ 'text-mnemonic-repwd' | translate }}" [(ngModel)]="mnemonicRepassword">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</ion-content>
+<ion-footer>
+    <button ion-button full class="button-footer" (click)="onNext()" style="width: 100%">{{ 'text-memory' | translate }}</button>
+</ion-footer>

@@ -1,0 +1,16 @@
+Executable : /Users/kpachhai/android-sdk/cmake/3.6.4111459/bin/cmake
+arguments : 
+-H/Users/kpachhai/repos/github.com/cyber-republic/elastos-smartweb-alpha/wallet-demo-app/platforms/android/app
+-B/Users/kpachhai/repos/github.com/cyber-republic/elastos-smartweb-alpha/wallet-demo-app/platforms/android/app/.externalNativeBuild/cmake/release/armeabi-v7a
+-DANDROID_ABI=armeabi-v7a
+-DANDROID_PLATFORM=android-14
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/kpachhai/repos/github.com/cyber-republic/elastos-smartweb-alpha/wallet-demo-app/platforms/android/app/build/intermediates/cmake/release/obj/armeabi-v7a
+-DCMAKE_BUILD_TYPE=Release
+-DANDROID_NDK=/Users/kpachhai/android-sdk/ndk-bundle
+-DCMAKE_CXX_FLAGS=-fexceptions -frtti -std=c++11 -D_linux -D_GNUC -fvisibility=hidden -D_UNDEFDLLEXP
+-DCMAKE_TOOLCHAIN_FILE=/Users/kpachhai/android-sdk/ndk-bundle/build/cmake/android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=/Users/kpachhai/android-sdk/cmake/3.6.4111459/bin/ninja
+-GAndroid Gradle - Ninja
+-DANDROID_STL=c++_shared
+jvmArgs : 
+

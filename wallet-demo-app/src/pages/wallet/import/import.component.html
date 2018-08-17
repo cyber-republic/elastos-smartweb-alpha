@@ -1,0 +1,87 @@
+<ion-header>
+    <app-header [header]="header"></app-header>
+</ion-header>
+
+<ion-content no-bounce>
+    <div>
+        <ion-segment [(ngModel)]="selectedTab" color="primary" (ionChange)="selectTab(selectedTab)">
+            <ion-segment-button value="words">
+                {{ 'text-mnemonic' | translate }}
+            </ion-segment-button>
+            <ion-segment-button value="file">
+                {{ 'text-key-file' | translate }}
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+
+    <div *ngIf="selectedTab == 'file'">
+
+        <div class="kuangTextArea">
+            <textarea rows="4" class="backupWalletTextArea" placeholder="{{ 'import-text-keystroe-message' | translate}}" [(ngModel)]="keyStoreContent"></textarea>
+        </div>
+
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="password" placeholder="{{ 'text-backup-passworld-input' | translate }}" [(ngModel)]="importFileObj.backupPassWord" />
+                </div>
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="password" placeholder="{{ 'text-pay-password' | translate }}" [(ngModel)]="importFileObj.payPassword" />
+                </div>
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="password" placeholder="{{ 'text-pay-repassword' | translate }}" [(ngModel)]="importFileObj.rePayPassword" />
+                </div>
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="password" placeholder="{{ 'text-phrase-passworld-input' | translate }}" [(ngModel)]="importFileObj.phrasePassword">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="selectedTab == 'words'">
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <textarea class="weui-textarea" placeholder="{{ 'text-mnemonic-format' | translate}}" rows="2" [(ngModel)]="mnemonicObj.mnemonic" weui-textarea></textarea>
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="password" placeholder="{{ 'text-pay-password' | translate }}" [(ngModel)]="mnemonicObj.payPassword" />
+                </div>
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="password" placeholder="{{ 'text-pay-repassword' | translate }}" [(ngModel)]="mnemonicObj.rePayPassword" />
+                </div>
+            </div>
+        </div>
+
+        <ion-item (click)="toggleShowAdvOpts()">
+            <ion-label *ngIf="!showAdvOpts">{{'show-advanced-options' | translate}}</ion-label>
+            <ion-label *ngIf="showAdvOpts"> {{'hide-advanced-options' | translate}}</ion-label>
+        </ion-item>
+
+        <div *ngIf="showAdvOpts" class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="password" placeholder="{{ 'text-mnemonic-pwd' | translate }}" [(ngModel)]="mnemonicObj.phrasePassword" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</ion-content>
+
+<ion-footer>
+    <button ion-button full class="button-footer" (click)="onImport()" style="width: 100%">{{ 'confirm' | translate }}</button>
+</ion-footer>

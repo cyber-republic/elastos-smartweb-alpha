@@ -1,0 +1,43 @@
+<ion-header>
+    <app-header [header]="header"></app-header>
+</ion-header>
+
+<ion-content>
+    <div class="coin-info-top-box">
+        <img src="./assets/images/logo-maincolor.svg">
+        <div>{{exprotObj.name}}</div>
+    </div>
+    <div *ngIf="!backupWalletPlainText">
+        <div class="weui-cells">
+
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="password" placeholder="{{ 'text-wallet-pwd' | translate }}" [(ngModel)]="exprotObj.backupPassWord">
+                </div>
+
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="password" placeholder="{{ 'text-wallet-repwd' | translate }}" [(ngModel)]="exprotObj.reBackupPassWord">
+                </div>
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="password" placeholder="{{ 'text-pay-passworld-input' | translate }}" [(ngModel)]="exprotObj.payPassword">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="backupWalletPlainText" class="kuangTextArea">
+        <p>{{ 'text-keystroe-message' | translate }} </p>
+        <textarea rows="10" class="backupWalletTextArea">{{backupWalletPlainText}}</textarea>
+    </div>
+
+</ion-content>
+<ion-footer>
+    <button *ngIf="!backupWalletPlainText" ion-button full class="button-footer" (click)="onDown()" style="width: 100%">{{ 'text-down' | translate }}</button>
+    <button *ngIf="backupWalletPlainText" ion-button full class="button-footer" (click)="onCopay()" style="width: 100%">{{ 'text-copy-to-clipboard' | translate }}</button>
+</ion-footer>

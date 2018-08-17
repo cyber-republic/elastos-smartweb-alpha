@@ -1,0 +1,57 @@
+<app-header [header]="header"   ></app-header>
+
+<div>
+
+  <div class="weui-cells">
+    <div class="weui-cell">
+        <input class="weui-input" type="text" placeholder="{{ 'text-withdraw-address' | translate}}" [(ngModel)]="mainchain.accounts" />
+    </div>
+      <div class="weui-cell">
+        <input class="weui-input" type="text" placeholder="{{ 'text-price' | translate}}" [(ngModel)]="transfer.amount" />
+
+        <span class="transfer-balance">{{'text-balance' | translate}}：{{balance/SELA}}({{'text-rate' | translate}}：1:{{this.mainchain.rate}})</span>
+    </div>
+    <div class="weui-cell">
+      <textarea class="weui-textarea" placeholder="{{ 'text-remark' | translate}}" rows="3" [(ngModel)]="transfer.remark"
+                weui-textarea weui-cn="2" maxlength="20"></textarea>
+    </div>
+
+  </div>
+
+  <button class="button-default bottom transfer-button" (click)="onClick(2)">{{ 'text-transfer' | translate }}</button>
+</div>
+
+<weui-popup #subscribe>
+<div class="pop-box" >
+  <div class="weui-cells" style="margin: 0px;padding: 0px">
+
+    <div class="pop-title">{{'transfer-info' | translate}}<img class="close" src="./assets/images/icon/icon-close.svg" (click)="onClick(3)"></div>
+    <div class="weui-cell">
+      <p><span>{{'transfer-address' | translate}}</span><span>{{mainchain.accounts}}</span></p>
+
+    </div>
+    <div class="weui-cell">
+
+    <p><span>{{'text-price' | translate}}</span><span>{{transfer.amount}}</span></p>
+    </div>
+    <div class="weui-cell">
+
+      <p><span>{{'text-fees' | translate}}</span><span>{{transfer.fee/SELA}}</span></p>
+    </div>
+
+    <div class="weui-cell">
+
+      <p><span>{{'text-rate' | translate}}</span><span>1 : {{this.mainchain.rate}}</span></p>
+    </div>
+
+  </div>
+
+  <div class="weui-cell">
+      <input class="weui-input" type="password" placeholder="{{ 'text-pay-passworld-input' | translate }}" [(ngModel)]="transfer.payPassword">
+  </div>
+  <div class="button-default " style="margin: 20px auto"  (click)="onClick(4)">{{ 'confirm' | translate }}</div>
+
+</div>
+
+</weui-popup>
+

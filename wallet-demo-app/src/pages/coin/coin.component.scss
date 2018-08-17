@@ -1,0 +1,55 @@
+.coin-info-top-box {
+    text-align: center;
+    padding: 30px;
+    &>img {
+        width: 50px;
+    }
+}
+
+.transfer-list {
+    .transfer-list-img {
+        width: 30px;
+        margin-right: 10px;
+        display: block
+    }
+    .transfer-list-date {
+        color: #ccc;
+        font-size: 0.8em;
+    }
+    margin-bottom: 100px;
+}
+
+.coin-bottom {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: -webkit-box;
+    height: 50px;
+    line-height: 50px;
+    z-index: 999;
+    &>div {
+        -webkit-box-flex: 1;
+        text-align: center;
+        color: #fff;
+        &:nth-child(1) {
+            background-color: #0070C9;
+        }
+        &:nth-child(2) {
+            background-color: #36B8C8;
+        }
+        &:nth-child(3) {
+            background-color: #0070C9;
+        }
+    }
+}
+
+.coin-outher {
+    text-align: center;
+    color: $color-gray-light;
+    margin-top: 10px;
+}
+
+.address-whole {
+    overflow: auto;
+    height: 100%;
+}

@@ -1,0 +1,54 @@
+<app-header [header]="header"></app-header>
+<div class="id-box">
+
+    <div class="home-top1">
+        <img class="id-logo" src="./assets/images/1.0logo.png">
+        <div>{{ 'text-id-home-prompt' | translate }}</div>
+
+    </div>
+
+
+
+    <ul class="navID">
+        <li>
+            <a (click)="onNext(0)">
+                <i class="new"></i>
+                <span>{{ 'text-id-create' | translate }}</span>
+            </a>
+        </li>
+        <li>
+            <a (click)="onNext(1)">
+                <i class="import"></i>
+                <span>{{ 'text-id-import' | translate }}</span>
+            </a>
+        </li>
+        <li class="last-li">
+            <a (click)="onNext(2)">
+                <i class="guanli"></i>
+                <span>{{ 'text-id-manager' | translate }}</span>
+            </a>
+        </li>
+    </ul>
+    <div class="center-id">
+        <h3>{{ 'text-id-my' | translate }}</h3>
+        <ul class="idList">
+            <li class="item" *ngFor="let item of kycIdArr; let i = index" (click)="onItem(item)">
+                <a class="tiaozhuan">
+                    <i class="icon-i">{{i+1}}</i>
+                    <div class="item-text">
+                        <span class="item-text-title huan-hang">{{item.id}}</span>
+                        <p *ngIf="item.createType===1">
+                            {{ 'text-update-time' | translate }}：{{item.updateTiem}}&nbsp;&nbsp; {{item.finshNumber}}/{{item.maxNumber}}&nbsp;&nbsp;{{ 'text-person' | translate }}
+                        </p>
+                        <p *ngIf="item.createType===2">
+                            {{ 'text-update-time' | translate }}：{{item.updateTiem}}&nbsp;&nbsp; {{item.finshNumber}}/{{item.maxNumber}}&nbsp;&nbsp;{{ 'text-company' | translate }}
+                        </p>
+                    </div>
+                    <i class="to-right"></i>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div style="height: 100px;"></div>
+</div>
