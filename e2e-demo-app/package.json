@@ -15,7 +15,7 @@
     "ionic:serve": "ionic-app-scripts serve",
     "minify": "ionic-app-scripts build minify",
     "dep:start": "docker-compose -f ./docker/ditto-server.yml up -d",
-    "dep:stop": "docker-compose -f ./docker/ditto-server.yml",
+    "dep:stop": "docker-compose -f ./docker/ditto-server.yml down",
     "build:epk": "npm run build:prod && node shell/build.js"
   },
   "dependencies": {
