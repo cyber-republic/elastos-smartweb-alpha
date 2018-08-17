@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Elastos Messenger
+    </ion-title>
+      <ion-buttons end>
+      <button ion-button icon-only (click)="scanCode()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="goQrCode()">
+        <ion-icon name="barcode"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+      <button ion-item *ngFor="let item of items" (click)="itemSelected(item)" ion-long-press (onPressing)="presentSetNickname(item)">
+        <ion-avatar item-start>
+          <img src="assets/imgs/avatar.png">
+        </ion-avatar>
+        <h2>{{ item.label == null ? item.uid : item.label }}</h2>
+        <p>{{item.online == 1 ? 'online' : 'offline'}}</p>
+        <button ion-button clear item-end (click)="deleteFriend($event, item.uid)">Delete</button>
+      </button>
+    </ion-list>
+
+</ion-content>
