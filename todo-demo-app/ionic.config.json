@@ -1,0 +1,7 @@
+{
+  "name": "ElaAPP",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

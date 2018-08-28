@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Elastos Test
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	
+   <ion-list>
+       <ion-item>
+        <ion-label >组件名称</ion-label>
+        <ion-input type="text" placeholder="libElastos.HelloCarDemo.so" [(ngModel)]="carpath"></ion-input>
+      </ion-item>
+     </ion-list>
+   <button full ion-button color="secondary" (click)="require_module()">导入组件</button> 
+   <button full ion-button color="secondary" (click)="require_DID()">DID登录</button> 
+   <button full ion-button color="secondary" (click)="require_pay()">钱包支付</button> 
+</ion-content>
+
+

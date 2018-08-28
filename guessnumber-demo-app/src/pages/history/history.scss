@@ -1,0 +1,60 @@
+page-history {
+    .list_div {
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        right: 0px;
+        padding: 0px 15px;
+        .lootery {
+            width: 160px;
+            margin: 0 auto;
+            display: block;
+        }
+        p {
+            margin-top: 16px;
+            font-size: 12px;
+            color: white !important;
+            word-break: break-all;
+        }
+    }
+    .list_cell_content {
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 8px 12px;
+        position:relative;
+        padding-right: 30px;
+        
+        a {
+            text-decoration: none;
+        }
+        p {
+            margin: 0px;
+            font-size: 14px;
+            line-height: 21px;
+            &:first-child {
+                margin-bottom: 5px;
+                span {
+                    padding-left: 5px;
+                    margin-left: -3px;
+                }
+            }
+            &:last-child span {
+                padding-left: 5px;
+                margin-left: -3px;
+            }
+        }
+        img{
+            position:absolute;
+            right:15px;
+            top:25px;
+            width:13px;
+        }
+    }
+    .list_cell_content p:last-child 
+    .list_cell_content  img{
+        position:absolute;
+        right:15px;
+        top:25px;
+        width:13px;
+    }
+}

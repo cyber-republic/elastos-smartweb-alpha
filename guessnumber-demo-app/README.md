@@ -1,7 +1,7 @@
 ## Prerequisites
 - Install JDK 1.8 and android sdk
 - Install ionic and cordova using "npm install -g ionic cordova"
-- This build uses cordova version 7.0.0
+- This build uses cordova version 7.1.1
 
 ## How to build the app
 - npm install
@@ -10,5 +10,5 @@
 - npm run build:epk
 
 ## How to run the app
-- Import IM.epk into Trinity
+- Import guessnumber.epk into Trinity
 - Click on the app to open it

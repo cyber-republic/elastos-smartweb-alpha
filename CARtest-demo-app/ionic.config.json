@@ -1,0 +1,7 @@
+{
+  "name": "mygame",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

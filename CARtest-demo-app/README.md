@@ -10,5 +10,5 @@
 - npm run build:epk
 
 ## How to run the app
-- Import IM.epk into Trinity
+- Import CARtest.epk into Trinity
 - Click on the app to open it
