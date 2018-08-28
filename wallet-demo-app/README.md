@@ -7,6 +7,7 @@
 - npm install
 - mkdir www
 - cordova platform add android
+- ionic cordova plugin add ElaWallet
 - npm run build:epk
 
 ## How to run the app

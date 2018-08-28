@@ -1,6 +1,6 @@
 {
-  "name": "Elastos Dapp",
-  "short_name": "Elaapp",
+  "name": "Todo",
+  "short_name": "Todo",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{

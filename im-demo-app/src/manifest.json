@@ -1,6 +1,6 @@
 {
-  "name": "Messenger",
-  "short_name": "Messenger",
+  "name": "InstantMessenger",
+  "short_name": "IM",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{

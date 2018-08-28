@@ -1,6 +1,6 @@
 {
-  "name": "Elastos Dapp",
-  "short_name": "Elaapp",
+  "name": "Wallet",
+  "short_name": "Wallet",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{

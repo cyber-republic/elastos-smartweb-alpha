@@ -1,6 +1,6 @@
 {
-  "name": "Game",
-  "short_name": "Ionic",
+  "name": "Guessnumber",
+  "short_name": "Guessnumber",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
