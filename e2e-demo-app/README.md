@@ -24,7 +24,7 @@
 * Make sure to install docker and docker-compose first.
 * Run **npm run dep:start**
 * There will be a new folder named **data** under ./docker
-* Follow the [./docker/readme.md](./docker/readme.md) to configure docker instance.
+* Set CORS for ditto-server by adding "header('Access-Control-Allow-Origin: *');" to the file  ./data/ditto/config/domains.config.php
 * Run **npm run dep:stop && npm run dep:start** to restart instance.
 
 ## Connect ditto server with carrier

@@ -1,5 +1,5 @@
 {
-  "name": "Desktop",
+  "name": "wallet",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
@@ -44,9 +44,7 @@
     "angular2-uuid": "^1.1.1",
     "angularx-qrcode": "^1.1.5",
     "appmanager": "file:appmanager",
-    "archiver": "^2.1.1",
     "bootstrap": "^4.1.0",
-    "com.plugin.ElaWallet": "ElaWallet",
     "com.plugin.appmanager": "appmanager",
     "cordova-android": "^7.1.1",
     "cordova-clipboard": "^1.2.1",
@@ -85,7 +83,8 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "^3.1.11",
-    "typescript": "~2.6.2"
+    "typescript": "~2.6.2",
+    "archiver": "^2.1.1"
   },
   "description": "An Ionic project",
   "cordova": {
@@ -105,8 +104,7 @@
       "ElaWallet": {},
       "phonegap-plugin-barcodescanner": {
         "ANDROID_SUPPORT_V4_VERSION": "27.+"
-      },
-      "com.plugin.ElaWallet": {}
+      }
     },
     "platforms": [
       "android"
