@@ -7,43 +7,44 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-advanced-http": {
-      "PACKAGE_NAME": "com.elastos.demo"
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.elastos.e2edemo"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.elastos.demo"
-    },
-    "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.elastos.demo"
-    },
-    "cordova-plugin-filechooser": {
-      "PACKAGE_NAME": "com.elastos.demo"
-    },
-    "cordova-plugin-filepath": {
-      "PACKAGE_NAME": "com.elastos.demo"
-    },
-    "cordova-plugin-ionic-keyboard": {
-      "PACKAGE_NAME": "com.elastos.demo"
-    },
-    "cordova-plugin-ionic-webview": {
-      "PACKAGE_NAME": "com.elastos.demo"
+      "PACKAGE_NAME": "com.elastos.e2edemo"
     },
     "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.elastos.demo"
+      "PACKAGE_NAME": "com.elastos.e2edemo"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.elastos.e2edemo"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.elastos.e2edemo"
+    },
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.elastos.e2edemo"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.elastos.demo"
+      "PACKAGE_NAME": "com.elastos.e2edemo"
     },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.elastos.demo"
+    "cordova-plugin-filechooser": {
+      "PACKAGE_NAME": "com.elastos.e2edemo"
     },
-    "ElaWallet": {
-      "PACKAGE_NAME": "com.elastos.demo"
+    "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "com.elastos.e2edemo"
     },
     "phonegap-plugin-barcodescanner": {
       "ANDROID_SUPPORT_V4_VERSION": "27.+",
-      "PACKAGE_NAME": "com.elastos.demo"
+      "PACKAGE_NAME": "com.elastos.e2edemo"
+    },
+    "ElaWallet": {
+      "PACKAGE_NAME": "com.elastos.e2edemo"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.elastos.e2edemo"
+    }
+  }
 }

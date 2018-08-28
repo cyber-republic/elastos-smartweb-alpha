@@ -30,11 +30,21 @@ Keyboard.fireOnShow = function (height) {
     cordova.fireWindowEvent('keyboardDidShow', {
         'keyboardHeight': height
     });
+
+    // To support the keyboardAttach directive listening events
+    // inside Ionic's main bundle
+    cordova.fireWindowEvent('native.keyboardshow', {
+        'keyboardHeight': height
+    });
 };
 
 Keyboard.fireOnHide = function () {
     Keyboard.isVisible = false;
     cordova.fireWindowEvent('keyboardDidHide');
+
+    // To support the keyboardAttach directive listening events
+    // inside Ionic's main bundle
+    cordova.fireWindowEvent('native.keyboardhide');
 };
 
 Keyboard.fireOnHiding = function () {
