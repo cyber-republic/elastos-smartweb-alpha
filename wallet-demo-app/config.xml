@@ -76,6 +76,6 @@
     <plugin name="phonegap-plugin-barcodescanner" spec="^8.0.0">
         <variable name="ANDROID_SUPPORT_V4_VERSION" value="27.+" />
     </plugin>
-    <engine name="android" spec="~7.1.1" />
     <plugin name="ElaWallet" spec="ElaWallet" />
+    <engine name="android" spec="^7.1.1" />
 </widget>
