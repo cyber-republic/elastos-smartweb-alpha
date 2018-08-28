@@ -1,0 +1,106 @@
+page-info {
+  ion-header {
+    padding-top: 48px;
+  }
+  .scroll-content {
+    margin-top: 92px;
+  }
+  .header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios {
+    border: none;
+    background-color: #eef5f9;
+  }
+  .toolbar-content-md {
+    position: absolute;
+  }
+  .toolbar {
+    padding: 5px 16px;
+    .button-inner {
+      display: none;
+    }
+    .toolbar-content {
+      .button-inner {
+        display: inline-block;
+        padding-left: 8px;
+        img {
+          height: 24px;
+        }
+      }
+    }
+  }
+  
+  .list-header .label{
+    margin: 13px 8px 0 0;
+  }
+
+  .content-ios, .content-md {
+    background-color: #eef5f9;
+    .checkbox-icon {
+      width: 21px;
+      height: 21px;
+    }
+    .list-ios, .list-md {
+      margin:  0;
+    }
+    .item-ios, .item-md{
+      background-color: #eef5f9;
+      .up-app img {
+        width: 56px;
+        padding: 0;
+        height: inherit;
+      }
+      .label {
+        font-size: 16px;
+        color: #000;
+        font-weight: 700;
+      }
+      .checkbox-md {
+        margin: 9px 18px 9px 4px;
+      }
+      ion-thumbnail {
+        min-height: auto;
+        min-width: auto;
+        margin: 6px 18px 6px 0;
+        img {
+          width: 27.5px;
+          height: 27.5px;
+        }
+      }
+      .checkbox-icon {
+        border: none;
+        background: url(../assets/imgs/radio-check.png) 100% 100% no-repeat;
+        border-radius: 0;
+        background-size: 21px;
+      }
+      .checkbox-checked {
+        background: url(../assets/imgs/radio-checked.png) 100% 100% no-repeat;
+        background-size: 21px;
+      }
+      .checkbox-inner {
+        border: none;
+      }
+      .app-info {
+        padding: 10px 0;
+        color: #000;
+        h4 {
+          font-size: 14px;
+        }
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+    .desc {
+      display: block;
+      margin: 0 16px;
+      color: #000;
+      font-size: 12px;
+      font-family: 'FiraSans-Bold';
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .hide {
+    display: none;
+  }
+}

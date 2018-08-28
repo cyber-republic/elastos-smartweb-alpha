@@ -1,0 +1,77 @@
+<!--
+  Generated template for the ManagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-navbar transparent>
+    <ion-buttons start class="man-title">
+        Management
+    </ion-buttons>
+    <ion-buttons end (click)="goToIndex(i)" style="z-index: 999;">
+        <img class="icon-right" src="assets/imgs/man-del.png" alt="Delete" (click)="goToIndex()">
+    </ion-buttons>
+
+    <!-- <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon>
+          <img class="icon-right" src="assets/imgs/switch.png" alt="">
+        </ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon>
+          <img class="icon-right" src="assets/imgs/shut.png" alt="">
+        </ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content overflow-scroll="true">
+  <ion-card class="import-box">
+    <button ion-button icon-only (click)="importFromEpk()">
+      <ion-icon>
+        <img class="icon-right" src="assets/imgs/add.png" alt="">
+      </ion-icon>
+    </button>
+    <ion-card-content>
+      <div class="title">Import from Local file</div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list no-lines>
+    <ion-item *ngFor="let item of appList, let i = index">
+      <ion-checkbox color="dark" ng-checked="checked" (click)='checkApp(item)'></ion-checkbox>
+      <ion-thumbnail item-start (click)="goInfo(i)">
+        <img src={{item.path}} alt="">
+        <div class="thum-inner">
+            <h2>{{item.name}}</h2>
+            <p>{{item.size}}</p>
+            <p>Added {{item.date}}</p>
+        </div>
+        <img class="right_arrow" src="assets/imgs/arrow.png">
+      </ion-thumbnail>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<!-- <ion-footer *ngIf="isShow"> -->
+<div class="footer" *ngIf="isShow">
+  <ion-row>
+    <!-- <ion-col col-6>
+      <ion-card class="card-box card-export">
+        Export
+      </ion-card>
+    </ion-col> -->
+    <ion-col col-12>
+      <ion-card class="card-box card-delete" (click)="doDel()">
+        Delete
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</div>
+
+<!-- </ion-footer> -->

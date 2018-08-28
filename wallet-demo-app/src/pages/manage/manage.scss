@@ -1,0 +1,192 @@
+page-manage {
+  ion-header {
+    padding-top: 48px;
+  }
+  .scroll-content {
+    margin-top: 92px;
+  }
+  .header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios {
+    border: none;
+    background-color: #eef5f9;
+  }
+  .card-ios {
+    margin: 10px 20px;
+    width: calc(100% - 40px);
+    background-color: #eef5f9;
+    .title {
+      font-family: 'FiraSans-Medium';
+      font-size: 15px;
+    }
+  }
+  .card-md {
+    margin: 10px 20px;
+    width: calc(100% - 40px);
+    background-color: #eef5f9;
+    .title {
+      font-family: 'FiraSans-Medium';
+      font-size: 15px;
+    }
+  }
+
+  .toolbar {
+    padding: 5px 16px;
+    .button-inner {
+      display: none;
+    }
+    .back-button {
+      position: absolute;
+      right: 0;
+    }
+    .bar-button-ios {
+      padding: 0;
+    }
+    .man-title {
+      position: absolute;
+      text-transform: capitalize;
+      font-family: 'FiraSans-Bold';
+      display: inline-block;
+      font-size: 24px;
+      color: #000000; 
+      font-weight: 700;
+    }
+  }
+  .content-ios, .content-md {
+    background: #eef5f9;
+    width: 100%;
+    ion-thumbnail {
+      display: flex;
+      width: 85%;
+      img {
+        margin: 10px;
+        height: 60px;
+        width: 60px;
+      }
+      .thum-inner {
+        width: calc(100% - 80px);
+        padding: 10px;
+      }
+      h2, p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .item {
+      // background-color: rgba(red, green, blue, 0);
+      background: #eef5f9;
+      .checkbox-ios {
+        .checkbox-icon {
+          border: none;
+          background: url(/assets/imgs/check.png) 100% 100% no-repeat;
+          border-radius: 0;
+          background-size: 21px;
+        }
+        .checkbox-checked {
+          background: url(/assets/imgs/checked.png) 100% 100% no-repeat;
+          background-size: 21px;
+        }
+      }
+      .right_arrow {
+        position: absolute;
+        right: 25px;
+        top: 25%;
+        width: 12px;
+        height: 20px;
+      }
+    }
+    .item-inner {
+      display: none;
+    }
+  }
+  .content-md {
+    background: #eef5f9;
+    width: 100%;
+    ion-thumbnail {
+      display: flex;
+      width: 80%;
+      .thum-inner {
+        padding: 10px;
+      }
+      h2, p {
+        white-space: nowrap;
+      }
+    }
+    .item {
+      // background-color: rgba(red, green, blue, 0);
+      background: #eef5f9;
+      .checkbox-ios {
+        .checkbox-icon {
+          border: none;
+          background: url(/assets/imgs/check.png) 100% 100% no-repeat;
+          border-radius: 0;
+          background-size: 21px;
+        }
+        .checkbox-checked {
+          background: url(/assets/imgs/checked.png) 100% 100% no-repeat;
+          background-size: 21px;
+        }
+      }
+      .right_arrow {
+        position: absolute;
+        right: 25px;
+        top: 25%;
+        width: 12px;
+        height: 20px;
+      }
+    }
+    .item-inner {
+      display: none;
+    }
+  }
+  .icon-right {
+    width: 24px;
+  }
+  .footer {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 60px;
+    z-index: 999;
+    .card-box {
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 16px;
+      color: #fff;
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0);
+    }
+    .card-export {
+      background-color: #0064D7;
+    }
+    .card-delete {
+      background-color: #D0021B;
+    }
+  }
+  .import-box {
+    background-color: #0064D7;
+    height: 112px;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    padding-top: 16px;
+    border-radius: 10px;
+    .card-content {
+      padding-top: 0px;
+    }
+    .button {
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+    }
+    .button-inner {
+      background-color: transparent;
+    }
+    .button-ios {
+      background-color: #0064D7;
+    }
+  }
+  .item-cover {
+    width: 15%
+  }
+}
