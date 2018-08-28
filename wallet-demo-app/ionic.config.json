@@ -1,7 +1,0 @@
-{
-  "name": "wallet.ionic",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
-}

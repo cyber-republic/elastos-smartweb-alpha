@@ -1,9 +1,0 @@
-<app-header [header]="header"></app-header>
-<div class="receive-box">
-    <qrcode class="receive-qrocde" [qrdata]="qrcode" [size]="200" [level]="'M'"></qrcode>
-    <p class="receive-address" (click)="onNext(0)">{{address}} <img src="./assets/images/icon/icon-copy.svg"></p>
-    <!-- <p class="receive-address-create" (click)="onNext(1)">{{ 'text-create-address' | translate }}</p> -->
-    <div class="recevie-bottom" (click)="onNext(2)">
-        <p>{{ 'text-manager-address' | translate }}</p>
-    </div>
-</div>
