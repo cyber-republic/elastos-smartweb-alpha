@@ -16,5 +16,5 @@ function check_DID(publicKey, Did, message, sign)
 			return true;
 		}
 	}
-    retur false;
+    return false;
 }

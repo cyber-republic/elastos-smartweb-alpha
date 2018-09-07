@@ -61,10 +61,10 @@ export class HomePage {
     // 弹出框提示是否Did登陆
   showAlert() {
     const alert = this.alertCtrl.create({
-      title: '用户未登录!',
-      subTitle: '获取钱包DID登录!',
+      title: 'User not logged in!',
+      subTitle: 'Get the wallet DID login!',
       buttons: [{
-        text: '确认',
+        text: 'Confirm',
         handler: data => {
           this.require_DID()
         }
