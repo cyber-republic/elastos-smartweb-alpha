@@ -41,14 +41,14 @@ export class HomePage {
   
   require_DID(){
 	  //console.log('Error: zhh ', "DATE require_wallet" );
-	  cordova.plugins.appmanager.StartApp("wallet/www/index.html" + "?type=did_login&message=this is did login message&backurl=CarTest/www/index.html", 
+	  cordova.plugins.appmanager.StartApp("wallet/www/index.html" + "?type=did_login&message=this is did login message&backurl=CARtest/www/index.html", 
 	  function (data) { }, 
 	  function (error) { });
   }
   
   require_pay(){
 	  //console.log('Error: zhh ', "DATE require_wallet" );
-	  cordova.plugins.appmanager.StartApp("wallet/www/index.html" + "?type=payment&amount=10000&address=EeDUy6TmGSFfVxXVzMpVkxLhqwCqujE1WL&memo=chinajoylottery-f-EHmMW4UVLBkr6QB61CBexUQiXvFigvDJwi-fe5d57161eb78e0d3ff5d5a24398e9aea8914f71e762f06a49cd515b45d96af2&information=sss&backurl=CarTest/www/index.html", 
+	  cordova.plugins.appmanager.StartApp("wallet/www/index.html" + "?type=payment&amount=10000&address=EeDUy6TmGSFfVxXVzMpVkxLhqwCqujE1WL&memo=chinajoylottery-f-EHmMW4UVLBkr6QB61CBexUQiXvFigvDJwi-fe5d57161eb78e0d3ff5d5a24398e9aea8914f71e762f06a49cd515b45d96af2&information=sss&backurl=CARtest/www/index.html", 
 	  function (data) { }, 
 	  function (error) { });
   }

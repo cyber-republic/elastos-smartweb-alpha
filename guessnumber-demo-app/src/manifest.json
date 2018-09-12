@@ -1,6 +1,6 @@
 {
   "name": "Guessnumber",
-  "short_name": "Guessnumber",
+  "short_name": "guessnumber",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{

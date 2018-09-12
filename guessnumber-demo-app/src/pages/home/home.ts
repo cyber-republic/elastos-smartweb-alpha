@@ -101,14 +101,14 @@ export class HomePage {
   
    require_DID(){
 	  cordova.plugins.appmanager.StartApp("wallet/www/index.html" +
-	  "?type=did_login&message=this is did login message&backurl=guess/www/index.html", 
+	  "?type=did_login&message=this is did login message&backurl=guessnumber/www/index.html", 
 	  function (data) {}, 
 	  function (error) {});
   }
   
   require_pay(){
 	  //console.log('Error: zhh ', "DATE require_wallet" );
-	  cordova.plugins.appmanager.StartApp("wallet/www/index.html" + "?type=payment&amount=10000&address=EeDUy6TmGSFfVxXVzMpVkxLhqwCqujE1WL&memo="+ this.submitParams +"&information=sss&backurl=guess/www/index.html", 
+	  cordova.plugins.appmanager.StartApp("wallet/www/index.html" + "?type=payment&amount=10000&address=EeDUy6TmGSFfVxXVzMpVkxLhqwCqujE1WL&memo="+ this.submitParams +"&information=sss&backurl=guessnumber/www/index.html", 
 	  function (data) { }, 
 	  function (error) { });
   }
