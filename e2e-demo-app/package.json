@@ -54,7 +54,7 @@
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "ipfs-api": "^22.2.2",
-    "lodash": "4.17.13",
+    "lodash": "4.17.19",
     "papaparse": "^4.5.0",
     "phonegap-plugin-barcodescanner": "^8.0.0",
     "rxjs": "6.2.1",
